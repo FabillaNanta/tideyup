@@ -1,0 +1,102 @@
+<script>
+<?php
+    include ("koneksi.php");
+    $kode_user = $_SESSION["kode_user"];
+    $query = "SELECT * FROM `tidepad` WHERE kode_user='$kode_user'";
+    mysqli_query($koneksi, $query);
+?>
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about tideyup</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+    <nav class="navbar sticky-top navbar-light bg-light">
+    <a class="navbar-brand mx-auto" align="center" href="index.php">
+      <img src="img/logo.png" width="70%" height="70%" class="d-inline-block align-top" alt="">
+     </a>
+</nav>
+<body>
+    <style>
+        html {
+          height: 100%;
+              }
+        body {
+          background-color: #393644;
+          background-image: url('img/register.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: cover;
+              }
+      
+      </style>
+     <div class="container col-md px-4 py-5">
+    <div class="card font-monospace">
+        <div class="card-header">
+          about us!
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p><em>Tideyup</em> is a web-based app that is able to help researchers to maintain a structured observation data and notes that is exclusively used for waves observation. You can fill out the form and put everything you need to put there. Then, in the <em>review session</em> feature, you can recap all of your data that you previously inputed on the <em>tidepad</em> feature. </p>
+            <footer class="blockquote-footer">fabilla & ita <cite title="Source Title">marine information system</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+      <br><br>
+      <div class="card font-monospace">
+        <div class="card-header">
+            how it works!
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <ul>
+                <li>Go to the <em>tidepad</em> feature on your user homepage</li>
+                <li>This feature already provide the common data that you usually get on your observation, so simply fill out the form and you can add your personal notes as well!</li>
+                <li>Then go ahead and move to our <em>review session</em> feature. Tadaah! your data that you previously inserted are going to show up there!</li>
+                <li><strong>Gently reminder! On the data ID section, you can freely choose your own ID! If the data doesn't appear on the <em>review session</em> feature, please choose a different ID!</strong>
+                <li>Have fun and good luck!</li>
+            </ul>
+        </div>
+      </div>
+      
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card bg-dark text-white font-monospace">
+            <div class="card-body">
+              <h5 class="card-title"><em>review session</em></h5>
+              <p class="card-text">all of your observation data will be shown here!</p>
+              <a href="reviewdata.php" class="btn btn-primary">start this session!</a>
+            </div>
+          </div>
+          <br><br>
+        </div>
+        <div class="col-sm-6">
+          <div class="card bg-success text-white font-monospace">
+            <div class="card-body">
+              <h5 class="card-title"><em>tidepad</em></h5>
+              <p class="card-text">you can store your ocean waves observataion data here!</p>
+              <a href="tidepad.php" class="btn btn-primary">start this session!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+<br>
+    <div class="d-grid gap-2">
+        <a href="index.php" class="btn btn-light font-monospace" type="button">home</a>
+      </div>
+</div>
+</body>
+</html>
